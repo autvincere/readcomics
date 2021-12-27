@@ -1,7 +1,7 @@
 import React from 'react';
-import {Container, Text, Thumbs} from './styles';
-import {View, ScrollView, TouchableOpacity} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {Container} from './styles';
+import {ScrollView} from 'react-native';
+import ThumbComic from '../../atoms/ThumbComic';
 import {
   batmanEdition,
   xmenEdition,
@@ -10,10 +10,8 @@ import {
   superman,
   flash,
 } from '../../../utils/data/index';
-import ThumbComic from '../../atoms/ThumbComic';
-const Index = () => {
-  const navigation = useNavigation();
 
+const Index = () => {
   return (
     <ScrollView>
       <Container
@@ -33,45 +31,36 @@ const Index = () => {
           Xmen
         </ThumbComic>
 
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Comic', darkAges)}>
-          <Thumbs source={require('../../../assets/img/dark_ages_cover.jpg')} />
-          <Text style={{color: 'red', fontSize: 20, textAlign: 'center'}}>
-            Dark Ages
-          </Text>
-        </TouchableOpacity>
+        <ThumbComic
+          stackScreen="Comic"
+          nameEdition={darkAges}
+          url={require('../../../assets/img/dark_ages_cover.jpg')}>
+          Dark Ages
+        </ThumbComic>
 
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Comic', avengers)}>
-          <Thumbs source={require('../../../assets/img/avengers_cover.jpg')} />
-          <Text style={{color: 'red', fontSize: 20, textAlign: 'center'}}>
-            The Avengers
-          </Text>
-        </TouchableOpacity>
+        <ThumbComic
+          stackScreen="Comic"
+          nameEdition={avengers}
+          url={require('../../../assets/img/avengers_cover.jpg')}>
+          The Avengers
+        </ThumbComic>
 
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Comic', superman)}>
-          <Thumbs source={require('../../../assets/img/superman_cover.jpg')} />
-          <Text
-            style={{
-              color: 'red',
-              fontSize: 20,
-              textAlign: 'center',
-              // resizeMode: 'contain',
-            }}>
-            Superman
-          </Text>
-        </TouchableOpacity>
+        <ThumbComic
+          stackScreen="Comic"
+          nameEdition={superman}
+          url={require('../../../assets/img/superman_cover.jpg')}>
+          Superman
+        </ThumbComic>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Comic', flash)}>
-          <Thumbs source={require('../../../assets/img/the_flash_cover.jpg')} />
-          <Text style={{color: 'red', fontSize: 20, textAlign: 'center'}}>
-            The Flash
-          </Text>
-        </TouchableOpacity>
+        <ThumbComic
+          stackScreen="Comic"
+          nameEdition={flash}
+          url={require('../../../assets/img/the_flash_cover.jpg')}>
+          The Flash
+        </ThumbComic>
       </Container>
     </ScrollView>
   );
 };
-Index.displayName = 'Home_Index_Template';
+Index.displayName = 'Home_container';
 export default Index;

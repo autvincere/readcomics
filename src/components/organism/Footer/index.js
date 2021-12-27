@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, Text, ScrollView} from 'react-native';
 import SVGImg from '../../../assets/svg/me-gusta.svg';
-const index = () => {
+
+const Index = () => {
   return (
     <View
       style={{
@@ -18,4 +19,5 @@ const index = () => {
   );
 };
 
-export default index;
+Index.displayName = 'Footer_organism';
+export default Index;

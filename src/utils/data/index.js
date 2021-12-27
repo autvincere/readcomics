@@ -13,6 +13,7 @@ const structure = {
 };
 
 const formatImage = '.jpg';
+
 const lengthNumberCheck = n => {
   // const toStringNumber = String(n);
   if (n === 0) {

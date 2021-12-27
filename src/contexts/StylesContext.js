@@ -5,7 +5,9 @@ const StylesContext = createContext();
 
 const StylesProvider = ({children}) => {
   const [isLightTheme, setLightTheme] = useState(true);
+
   const toggleTheme = () => setLightTheme(previousState => !previousState);
+  
   const theme = {
     colors: isLightTheme ? colors.light : colors.dark,
     typography,

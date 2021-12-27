@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const ImageCover = styled.Image`
-  height: 190px;
+  height: 180px;
   width: 120px;
   margin: 4px;
 `;
