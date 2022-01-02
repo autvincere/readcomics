@@ -19,8 +19,6 @@ const lengthNumberCheck = n => {
   if (n === 0) {
     return String(n) + 1;
   }
-  // } else if (n === 1) {
-  //   return '0' + String(n);
   if (n < 0) {
     return '01';
   }

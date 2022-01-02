@@ -7,14 +7,14 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/components/containers/Home';
 import Comic from './src/components/containers/Comic';
-import StylesProvider from './src/contexts/StylesContext';
+import ThemeProvider from './src/contexts/ThemeProvider';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <StylesProvider>
-        <Layout barBgColor={colors.light} bgColor={colors.dark}>
+      <ThemeProvider>
+        <Layout>
           <Stack.Navigator
             initialRouteName="Home"
             screenOptions={{
@@ -24,7 +24,7 @@ const App = () => {
             <Stack.Screen name="Comic" component={Comic} />
           </Stack.Navigator>
         </Layout>
-      </StylesProvider>
+      </ThemeProvider>
     </NavigationContainer>
   );
 };

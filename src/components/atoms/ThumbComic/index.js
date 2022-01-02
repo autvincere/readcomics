@@ -3,7 +3,7 @@ import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {ImageCover, TextImageCover} from './styles';
 
-const Index = ({children, stackScreen, nameEdition, url}) => {
+const Index = ({children, stackScreen, nameEdition, url, colorText}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
@@ -11,7 +11,7 @@ const Index = ({children, stackScreen, nameEdition, url}) => {
         navigation.navigate(stackScreen, nameEdition);
       }}>
       <ImageCover source={url} resizeMode="contain" />
-      <TextImageCover>{children}</TextImageCover>
+      <TextImageCover textColor={colorText}>{children}</TextImageCover>
     </TouchableOpacity>
   );
 };

@@ -12,3 +12,12 @@ export const Text = styled.Text`
   color: blue;
   font-weight: 500;
 `;
+
+export const ImageComic = styled.Image`
+  width: 100%;
+  /* height: windowHeight - 200; */
+  height: ${props => props.windowHeight - 200};
+  min-height: 200px;
+  /* resizeMode: 'contain', */
+  flex: 1;
+`;

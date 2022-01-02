@@ -1,21 +1,16 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {ContainerFooter, TextFooter} from './styles';
 import SVGImg from '../../../assets/svg/me-gusta.svg';
 
-const Index = () => {
+const Index = ({colors}) => {
+  // console.log(colors);
   return (
-    <View
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        alignContent: 'center',
-        backgroundColor: 'gray',
-      }}>
-      <Text style={{marginTop: 10}}>all rights are not mine</Text>
-      <SVGImg width={20} height={20} style={{fill: 'black'}} />
-    </View>
+    <ContainerFooter style={{backgroundColor: colors.backgroundColor}}>
+      <TextFooter style={{color: colors.textColor}}>
+        all rights are not mine
+      </TextFooter>
+      <SVGImg width={20} height={20} style={{fill: colors.iconColor}} />
+    </ContainerFooter>
   );
 };
 

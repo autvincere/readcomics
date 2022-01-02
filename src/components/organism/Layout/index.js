@@ -1,14 +1,13 @@
 import React from 'react';
-import {View, Text, SafeAreaView, ScrollView} from 'react-native';
-import Footer from '../Footer';
-import Header from '../Header';
+import {View, SafeAreaView} from 'react-native';
+import Footer from '../../containers/Footer';
+import Header from '../../containers/Header';
 
 const Index = ({children}) => {
-  // console.log(children);
   return (
     <SafeAreaView style={{flex: 1}}>
       <Header />
-      <View style={{backgroundColor: 'black', flex: 1}}>{children}</View>
+      <View style={{flex: 1}}>{children}</View>
       <Footer />
     </SafeAreaView>
   );
