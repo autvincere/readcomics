@@ -34,7 +34,7 @@ const Index = ({route}) => {
     }
     setNumberPage(prevState => +prevState - 1);
   };
-  console.log(ApiUrl(comicEdition, numberEdition, numberPage));
+  // console.log(ApiUrl(comicEdition, numberEdition, numberPage));
   //console.log(numberPage);
   return (
     <ScrollView>

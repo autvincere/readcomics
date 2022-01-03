@@ -11,9 +11,11 @@ const useFetchUrl = url => {
     const fetchData = async () => {
       try {
         setIsFetching(true);
+        // console.log('empezamos');
         const res = await fetch(url);
+        // console.log(res.status);
         if (res.status === 200) {
-          // console.log(res);
+          // console.log({res});
           setData(res.url);
         } else {
           setData(
@@ -22,7 +24,7 @@ const useFetchUrl = url => {
             ),
           );
         }
-        // console.log('la data pasa');
+        console.log('la data pasa');
       } catch (e) {
         setError(e);
         console.log('catch ' + e);
